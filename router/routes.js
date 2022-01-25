@@ -1,11 +1,16 @@
 const authRoute=require('./authRoute')
 const homapageRoute=require('./homePageRoute')
+const admin_homepage_route=require('./admin/admin_homepage_router')
 
 const routes=[
     // {
     //     path:'/home',
     //     handler:homapageRoute
     // },
+    {
+        path:'/admin',
+        handler:admin_homepage_route
+    },
     {
         path:'/auth',
         handler:authRoute

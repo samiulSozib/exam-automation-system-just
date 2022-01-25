@@ -6,7 +6,7 @@ const middlewares=[
     morgan('dev'),
     express.static('public'),
     express.urlencoded({extended:true}),
-    express.json(),
+    express.json()
 ]
 
 module.exports=(app)=>{

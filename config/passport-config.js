@@ -40,9 +40,9 @@ passport.use(
                 let session=''
                
                 if(profile._json.hd=='just.edu.bd'){
-                    role='02'
+                    role='2'
                 }else if(profile._json.hd=='student.just.edu.bd'){
-                    role='03'
+                    role='3'
                     let profile_email=profile._json.email
                     let split_email=(profile_email.split('@'))[0].split('.')
                     //console.log(split_email)
@@ -59,7 +59,7 @@ passport.use(
                     avatar:profile._json.picture,
                     department_id:department_id,
                     student_id:student_id,
-                    session:session,
+                    session:'20'+session+'-'+(1+parseInt(session)),
                     email:profile._json.email,
                     phone_number:'',
                     bank_account:'',

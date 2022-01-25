@@ -1,8 +1,8 @@
 const express=require('express')
 const passport=require('passport')
 const cookieSession=require('cookie-session')
-const setRoute=require('./router/routes')
 const setMiddleware=require('./middleware/middlewares')
+const setRoute=require('./router/routes')
 const passportSetup=require('./config/passport-config')
 
 const app=express()
@@ -18,6 +18,8 @@ app.use(cookieSession({
 
 app.use(passport.initialize())
 app.use(passport.session())
+
+
 
 setMiddleware(app)
 setRoute(app)
